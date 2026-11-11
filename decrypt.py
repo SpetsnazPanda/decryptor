@@ -10,7 +10,6 @@ def decrypt(data):
     for i in range(len(data)):
         b = data[i] & 0xFF
 
-        # Menggeser bit ke kanan satu posisi
         result[i] = ((b >> 1) | (b << 7)) & 0xFF
 
     return bytes(result)
